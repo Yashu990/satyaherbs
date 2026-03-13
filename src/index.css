@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-bronze font-sans;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif text-bronze;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-8 md:px-12 lg:px-16 py-20 md:py-32;
+  }
+
+  .hero-text {
+    @apply font-serif text-5xl md:text-7xl font-bold tracking-tight;
+  }
+
+  .button-primary {
+    @apply px-8 py-3 bg-bronze text-cream rounded-lg hover:bg-stone transition-colors duration-300;
+  }
+}
+
+/* Smooth scroll animations */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
